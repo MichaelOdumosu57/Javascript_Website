@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type = "text/javascript" src = "quiz_controls.js"> </script>
+</head>
+
+
+<body style ="background-color:yellow">
+<img src = "card_1.jpg" />
+<h2 font-size: 30px> What is the name of the wizard </h2>
+<p font-size: 20px> Your answer: <input type = "text" id ="txtName" /> </p>
+<p font-size: 20px> <input type="button" value="Submit your answer" id="btnAnswer" onclick ="init();" />
+
+<p style = "color:blue" font-size: 50px id = "message"> </p>
+<a href = "j_script_website.html"> Link back to homepage</a>
+
+    <form id="myForm" action="#" method="post">
+		
+    <fieldset>
+
+<p><label for="txtName">First Name:</label> <input type="text" id="txtNameS" name="txtName" /> </p>
+<p><input type="submit" value="Submit" onclick="validate()" /></p>
+
+		<p><label for="txtEmail">Email:</label><input type="text" id="txtEmail" name="txtEmail" /></p>
+		
+		<p><input type="submit" value="Submit" onclick="wait()" /></p>
+
+		
+		</fieldset>
+		  	
+		</form>
+		
+		<script type="text/javascript">
+	
+		function validate()
+		{
+		right = document.getElementById("txtNameS").value;
+		if (right.length > 3)
+		{
+		alert("I did something");
+		}
+		}
+		function email_check()
+		{
+		email = document.getElementById("txtEmail").value
+		 if (email.indexOf("@") == -1 || email.indexOf(".") == -1)
+		 {
+		 alert("enter a valid email");
+		 }
+		 }
+		 function wait()
+		 {
+		 var warn = setTimeout(email_check,2000);
+		
+		 }
+		wait()
+		 
+
+		</script>
+
+</body>
+</html>
